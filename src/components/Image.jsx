@@ -7,7 +7,7 @@ const Image = props => {
     return (
         <Box
             component='img'
-            src={`${process.env.PUBLIC_URL}/images${name}`}
+            src={`${process.env.PUBLIC_URL}/images/${name}`}
             sx={{ maxWidth: '100%', ...sx }}
             {...rest}
         />
