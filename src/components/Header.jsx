@@ -3,11 +3,9 @@ import {
     Box,
     IconButton,
     Toolbar,
-    Typography,
     Drawer,
     List,
     ListItem,
-    ListItemButton,
     ListItemIcon,
     ListItemText,
     Grid,
@@ -19,7 +17,7 @@ import React, { useState } from 'react';
 import sidebarLinks from '../services/sidebarLinks';
 import Search from './Search';
 
-const drawerWidth = 250;
+const drawerWidth = 280;
 
 const drawer = (
     <Box bgcolor='primary.main' display='flex' flexDirection='column' height='100%' pt={10}>
@@ -131,7 +129,7 @@ const Header = props => {
                 component='main'
                 sx={{
                     flexGrow: 1,
-                    p: 2,
+                    p: 4,
                     width: { md: `calc(100% - ${drawerWidth}px)` },
                     minHeight: 'calc(100vh - 40px)',
                     mt: 5,
