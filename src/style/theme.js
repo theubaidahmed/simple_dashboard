@@ -31,6 +31,7 @@ const theme = createTheme({
                         flexDirection: 'column',
                         justifyContent: 'space-between',
                         minHeight: '220px',
+                        minWidth: '150px',
                     },
                 },
                 {

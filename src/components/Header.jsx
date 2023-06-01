@@ -16,6 +16,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import React, { useState } from 'react';
 import sidebarLinks from '../services/sidebarLinks';
 import Search from './Search';
+import SearchIcon from '@mui/icons-material/Search';
 
 const drawerWidth = 280;
 
@@ -58,10 +59,10 @@ const Header = props => {
             <AppBar
                 position='fixed'
                 elevation={0}
-                color='transparent'
                 sx={{
                     width: { md: `calc(100% - ${drawerWidth}px)` },
                     ml: { md: `${drawerWidth}px` },
+                    backgroundColor: 'background.default',
                 }}>
                 <Toolbar sx={{ color: 'text.primary', pt: 2 }}>
                     <Grid container spacing={2}>
@@ -75,10 +76,15 @@ const Header = props => {
                                 <MenuIcon />
                             </IconButton>
                         </Grid>
-                        <Grid item>
+                        <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
                             <Search placeholder='Search...' />
                         </Grid>
-                        <Grid item xs={2} align='right'>
+                        <Grid item align='right' sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <IconButton>
+                                <SearchIcon />
+                            </IconButton>
+                        </Grid>
+                        <Grid item sm={2} align='right'>
                             <IconButton>
                                 <SettingsIcon />
                             </IconButton>

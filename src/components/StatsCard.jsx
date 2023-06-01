@@ -13,7 +13,7 @@ const StatsCard = props => {
             </Box>
 
             <Box>
-                <LinearProgress variant='determinate' />
+                <LinearProgress variant='determinate' value={25} sx={{ background: '#58ECD9' }} />
             </Box>
         </Card>
     );
