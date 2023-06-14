@@ -10,6 +10,7 @@ import {
     ListItemText,
     Grid,
     Avatar,
+    Typography,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -18,10 +19,13 @@ import sidebarLinks from '../services/sidebarLinks';
 import Search from './Search';
 import SearchIcon from '@mui/icons-material/Search';
 
-const drawerWidth = 280;
+const drawerWidth = 300;
 
 const drawer = (
-    <Box bgcolor='primary.main' display='flex' flexDirection='column' height='100%' pt={10}>
+    <Box bgcolor='primary.main' display='flex' flexDirection='column' height='100%' pt={5}>
+        <Typography pl={5} variant='h4' color='white' mb={2}>
+            Dribbble
+        </Typography>
         <List sx={{ px: 3 }}>
             {sidebarLinks.map(link => (
                 <ListItem
@@ -136,6 +140,7 @@ const Header = props => {
                 sx={{
                     flexGrow: 1,
                     p: 4,
+
                     width: { md: `calc(100% - ${drawerWidth}px)` },
                     minHeight: 'calc(100vh - 40px)',
                     mt: 5,

@@ -13,7 +13,16 @@ const StatsCard = props => {
             </Box>
 
             <Box>
-                <LinearProgress variant='determinate' value={25} sx={{ background: '#58ECD9' }} />
+                <LinearProgress
+                    variant='determinate'
+                    value={25}
+                    sx={{
+                        background: '#C6E6E7',
+                        '& .MuiLinearProgress-bar': {
+                            backgroundColor: '#58ECD9',
+                        },
+                    }}
+                />
             </Box>
         </Card>
     );
